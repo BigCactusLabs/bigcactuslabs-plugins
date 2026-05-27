@@ -1,0 +1,34 @@
+name: marketplace validate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Parse marketplace.json
+        run: |
+          python -c "
+          import json, sys
+          data = json.loads(open('.claude-plugin/marketplace.json').read())
+          assert data['name'], 'missing name'
+          assert data['plugins'], 'no plugins listed'
+          for p in data['plugins']:
+              assert p['name'], 'plugin missing name'
+              assert p['source'], 'plugin missing source'
+              src = p['source']
+              if isinstance(src, dict) and src.get('source') == 'git-subdir':
+                  assert src.get('url'), 'git-subdir missing url'
+                  assert src.get('path'), 'git-subdir missing path'
+                  assert src.get('ref') or src.get('sha'), 'git-subdir missing ref/sha pin'
+          print('OK: marketplace.json valid')
+          "

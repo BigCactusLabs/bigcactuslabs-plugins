@@ -1,0 +1,19 @@
+# BigCactusLabs Claude plugins
+
+A marketplace of Claude plugins built by Big Cactus Labs.
+
+## Install
+
+```
+/plugin marketplace add BigCactusLabs/claude-plugins
+```
+
+Then install individual plugins:
+
+```
+/plugin install dead-letter
+```
+
+## Plugins
+
+- **[dead-letter](https://github.com/BigCactusLabs/dead-letter)** — convert `.eml` emails to Markdown, triage folders, and build archive bundles.
