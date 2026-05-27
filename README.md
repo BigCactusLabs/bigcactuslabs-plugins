@@ -5,7 +5,7 @@ A marketplace of Claude plugins built by Big Cactus Labs.
 ## Install
 
 ```
-/plugin marketplace add BigCactusLabs/claude-plugins
+/plugin marketplace add BigCactusLabs/bigcactuslabs-plugins
 ```
 
 Then install individual plugins:
