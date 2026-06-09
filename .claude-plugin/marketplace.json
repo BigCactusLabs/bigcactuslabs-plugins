@@ -16,7 +16,7 @@
         "source": "git-subdir",
         "url": "https://github.com/BigCactusLabs/dead-letter.git",
         "path": "plugin",
-        "ref": "plugin-v0.2.2"
+        "ref": "plugin-v0.2.3"
       }
     }
   ]
