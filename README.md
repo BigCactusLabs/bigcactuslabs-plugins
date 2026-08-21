@@ -17,3 +17,7 @@ Then install individual plugins:
 ## Plugins
 
 - **[dead-letter](https://github.com/BigCactusLabs/dead-letter)** — convert `.eml` emails to Markdown, triage folders, and build archive bundles.
+
+Plugin entries pin the released tag and commit. Release automation in each
+plugin repository updates this catalog through a pull request so Claude Code
+and Cowork resolve the same published plugin assets.

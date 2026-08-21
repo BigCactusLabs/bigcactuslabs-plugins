@@ -30,5 +30,11 @@ jobs:
                   assert src.get('url'), 'git-subdir missing url'
                   assert src.get('path'), 'git-subdir missing path'
                   assert src.get('ref') or src.get('sha'), 'git-subdir missing ref/sha pin'
+              if p['name'] == 'dead-letter':
+                  version = p.get('version')
+                  assert version, 'dead-letter missing explicit version'
+                  assert src.get('ref') == f'plugin-v{version}', 'dead-letter ref/version mismatch'
+                  sha = src.get('sha', '')
+                  assert len(sha) == 40 and all(c in '0123456789abcdef' for c in sha), 'dead-letter missing exact commit sha'
           print('OK: marketplace.json valid')
           "
