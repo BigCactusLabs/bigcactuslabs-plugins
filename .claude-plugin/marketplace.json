@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "dead-letter",
-      "version": "0.4.0",
+      "version": "0.4.5",
       "description": "Convert .eml emails to Markdown with YAML front matter, triage folders, and build archive bundles.",
       "category": "productivity",
       "tags": [
@@ -21,8 +21,8 @@
         "source": "git-subdir",
         "url": "https://github.com/BigCactusLabs/dead-letter.git",
         "path": "plugin",
-        "ref": "plugin-v0.4.0",
-        "sha": "049faa63d3ac03d83722e81697b6c48280577da8"
+        "ref": "plugin-v0.4.5",
+        "sha": "e5b18ac675ba6a20aec763878604aecc04f03611"
       }
     }
   ]
